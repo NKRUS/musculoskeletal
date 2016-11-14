@@ -1,0 +1,46 @@
+.button:hover{
+    -fx-cursor: hand;
+}
+#ok_button {
+    -fx-background-color: #36804d;
+    -fx-text-fill: white;
+}
+#ok_button:hover {
+    -fx-background-color: #39ad77;
+}
+
+#cancel_button {
+    -fx-background-color: #e64c3b;
+    -fx-text-fill: white;
+}
+#cancel_button:hover {
+    -fx-background-color: #ff7a58;
+}
+
+#front_button, #sagital_button{
+    -fx-background-color: #bcbcbb;
+}
+#sagital_button:hover{
+    -fx-background-color: #a3a3a2;
+}
+#front_button:hover{
+    -fx-background-color: #a3a3a2;
+}
+#front_button:pressed, #sagital_button:pressed{
+    -fx-background-color: #bfbfbe;
+}
+
+#header{
+    -fx-background-color: #51616b;
+}
+#title{
+    -fx-background-color: #51616b;
+    -fx-font:  18pt "Calibri";
+    -fx-text-fill: #39ad77;
+    -fx-padding: 0 0 0 63;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-weight: bold;
+}
+#arrow_header{
+
+}

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: WHITE;" stylesheets="@../css/Oda.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kit.musculoskeletal.OdaController">
+   <top>
+      <HBox id="header" alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../image/arrow.png" />
+               </image>
+            </ImageView>
+            <Text id="title" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Опорно - двигательный аппарат">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <GridPane alignment="BOTTOM_CENTER" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowSpan="2">
+               <children>
+                  <Button id="front_button" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#showFrontalPane" prefHeight="45.0" text="Фронтальная плоскость" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font></Button>
+                  <Button id="sagital_button" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#showSagitalPane" prefHeight="45.0" text="Сагиттальная плоскость" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowSpan="2">
+               <children>
+                  <Button id="cancel_button" fx:id="cancelBtn" onAction="#cancel" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="45.0" text="Отмена" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font></Button>
+                  <Button id="ok_button" fx:id="okBtn" onAction="#ok" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="45.0" text="ОК" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </GridPane>
+   </bottom>
+   <center>
+      <StackPane BorderPane.alignment="CENTER">
+         <children>
+            <GridPane fx:id="frontalPane">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowSpan="2147483647">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <ImageView fx:id="frontal1" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/m21.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowSpan="3">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <ImageView fx:id="frontal2" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/m22.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowSpan="2147483647">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <ImageView fx:id="frontal3" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/m23.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="sagitalPane" visible="false">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowSpan="2147483647">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <ImageView fx:id="sagital1" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/m11.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowSpan="2147483647">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <ImageView fx:id="sagital2" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/m12.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowSpan="2147483647">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <ImageView fx:id="sagital3" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/m13.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
