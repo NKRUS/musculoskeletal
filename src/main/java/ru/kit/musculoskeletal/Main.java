@@ -19,7 +19,7 @@ public class Main extends Application {
         Parent root = new Pane();
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root));
-        Stage stage = new OdaStage(true,"");
+        Stage stage = new OdaStage(false,"");
 
         stage.show();
     }

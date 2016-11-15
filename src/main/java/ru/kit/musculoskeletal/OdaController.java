@@ -175,7 +175,7 @@ public class OdaController {
         String frontalResult,sagitalResult;
         switch (frontal){
             case "frontal1":
-                frontalResult = "plain";
+                frontalResult = "normal";
                 break;
             case "frontal2":
                 frontalResult = "right";
@@ -187,13 +187,13 @@ public class OdaController {
         }
         switch (sagital){
             case "sagital1":
-                sagitalResult = "plain";
+                sagitalResult = "normal";
                 break;
             case "sagital2":
-                sagitalResult = "lordosis";
+                sagitalResult = "backward";
                 break;
             case "sagital3":
-                sagitalResult = "kyphosis";
+                sagitalResult = "forward";
                 break;
             default: sagitalResult = "none";
         }
