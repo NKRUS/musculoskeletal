@@ -52,7 +52,7 @@ public class OdaController {
     private static ObservableList<ImageView> sagitalList = FXCollections.observableArrayList();
 
     private static final String NOT_CHOOSEN_IMAGE_STYLE = "-fx-border-color: transparent;";
-    private static final String CHOOSEN_IMAGE_STYLE = "-fx-border-color: #36804d; -fx-border-width: 3;";
+    private static final String CHOOSEN_IMAGE_STYLE = "-fx-border-color: #36804d; -fx-border-width: 3; -fx-border-radius: 10";
     private Map<String,String> result = new HashMap<>();
 
     private OdaStage stage;
