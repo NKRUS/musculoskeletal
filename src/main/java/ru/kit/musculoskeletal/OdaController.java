@@ -215,7 +215,7 @@ public class OdaController {
 
     private void writeJSON(Map<String, String> inspections) {
         try {
-            String jsonFileName = path.concat("base_output_file.json");
+            String jsonFileName = path.concat("oda_output_file.json");
             BufferedWriter e = new BufferedWriter(new FileWriter(new File(jsonFileName)));
             Throwable var2 = null;
 
